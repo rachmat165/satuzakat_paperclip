@@ -29,7 +29,13 @@
       "Bash(pnpm install:*)",
       "Bash(curl -sv http://127.0.0.1:3100/)",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(''''version:'''', d.get\\(''''version''''\\)\\)\")",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh auth:*)",
+      "Bash(winget install:*)",
+      "Bash(export PATH=\"$PATH:/c/Program Files/GitHub CLI\")",
+      "Bash(gh --version)",
+      "Bash(git remote:*)"
     ]
   }
 }
