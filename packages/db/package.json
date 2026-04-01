@@ -34,8 +34,8 @@
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "tsc && cp -r src/migrations dist/migrations",
+    "scripts": {
+    "build": "tsc && node -e \"const fs=require('fs'); const path=require('path'); const src='src/migrations'; const dest='dist/migrations'; fs.mkdirSync(dest,{recursive:true}); for (const name of fs.readdirSync(src)) { const s=path.join(src,name); const d=path.join(dest,name); if (fs.statSync(s).isDirectory()) { fs.cpSync(s,d,{recursive:true}); } else { fs.copyFileSync(s,d); } }\"",
     "clean": "rm -rf dist",
     "typecheck": "tsc --noEmit",
     "generate": "tsc -p tsconfig.json && drizzle-kit generate",

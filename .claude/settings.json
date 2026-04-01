@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for agent:*)",
+      "Bash(do)",
+      "Bash(echo \"=== $agent ===\")",
+      "Bash(node cli/node_modules/tsx/dist/cli.mjs cli/src/index.ts agent local-cli \"$agent\" -C \"$COMPANY_ID\" --api-base http://127.0.0.1:3100)",
+      "Bash(done)",
+      "Bash(node cli/node_modules/tsx/dist/cli.mjs cli/src/index.ts heartbeat --help)",
+      "Bash(node cli/node_modules/tsx/dist/cli.mjs cli/src/index.ts heartbeat run --help)",
+      "Bash(node cli/node_modules/tsx/dist/cli.mjs cli/src/index.ts heartbeat run --agent-id \"3ee77ca5-3da6-4551-9c87-697f1dc22cff\" --api-base http://127.0.0.1:3100 --timeout-ms 120000)",
+      "Bash(for agent_id in \"de06680d-7079-4d00-998c-de52b560c929\" \"bc583f10-0a9d-42c6-9481-e9be1fd73b5a\" \"1d0e0ff7-9765-4273-ab3a-864bb3538b27\" \"31b1266f-cecc-4b1a-ad8a-f477f3f7c682\")",
+      "Bash(do echo:*)",
+      "Bash(for agent_id in \"de06680d-7079-4d00-998c-de52b560c929\" \"bc583f10-0a9d-42c6-9481-e9be1fd73b5a\" \"31b1266f-cecc-4b1a-ad8a-f477f3f7c682\")",
+      "Bash(curl -s \"http://127.0.0.1:3100/api/companies/67ed5b48-4a1f-41ee-9660-012fe70240a6/agents\" -H \"Authorization: Bearer local\")",
+      "Bash(python3 -c \":*)",
+      "Bash(curl -s \"http://127.0.0.1:3100/api/agents/de06680d-7079-4d00-998c-de52b560c929\" -H \"Authorization: Bearer local\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(''''status:'''', d.get\\(''''status''''\\)\\)\")",
+      "Bash(node cli/node_modules/tsx/dist/cli.mjs cli/src/index.ts heartbeat run --agent-id \"de06680d-7079-4d00-998c-de52b560c929\" --api-base http://127.0.0.1:3100 --timeout-ms 120000)",
+      "Bash(node cli/node_modules/tsx/dist/cli.mjs cli/src/index.ts heartbeat run --agent-id \"31b1266f-cecc-4b1a-ad8a-f477f3f7c682\" --api-base http://127.0.0.1:3100 --timeout-ms 120000)",
+      "Bash(head -10 grep -rn \"PAPERCLIP_UI_DEV_MIDDLEWARE\\\\|uiDevMiddleware\" server/src/)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); [print\\(k,'''':'''',v\\) for k,v in d.get\\(''''scripts'''',{}\\).items\\(\\)]\")",
+      "Bash(find . -name vite.config* -not -path */node_modules/*)",
+      "Bash(powershell -Command \"Stop-Process -Id 21736, 34620 -Force\")",
+      "Bash(curl -s http://127.0.0.1:3100/)",
+      "Bash(powershell -Command \"Get-Process node | Stop-Process -Force\")",
+      "Bash(ls node_modules/.pnpm/lucide-react@0.574.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/alarm-clock*)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(''''lucide-react:'''', d.get\\(''''dependencies'''',{}\\).get\\(''''lucide-react''''\\) or d.get\\(''''devDependencies'''',{}\\).get\\(''''lucide-react''''\\)\\)\")",
+      "Bash(pnpm install:*)",
+      "Bash(curl -sv http://127.0.0.1:3100/)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(''''version:'''', d.get\\(''''version''''\\)\\)\")",
+      "Bash(git add:*)"
+    ]
+  }
+}
